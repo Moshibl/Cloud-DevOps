@@ -43,7 +43,7 @@ jobs:
       - run:
           name: Build front-end
           command: |
-            cd frontened
+            cd front ened
             npm install
             npm run build
       - save_cache:
