@@ -60,7 +60,7 @@ commands:
             # Logic for reverting the database state
             if (( $SUCCESS == 1 ));
             then
-              cd ~/cdond-c3-projectstarter/backend
+              cd ~/project/backend
               npm install
               npm run migration:revert
             fi
@@ -240,7 +240,7 @@ jobs:
       - run:
           name: Send migration results to kvdb.io
           command: |
-            if grep -q "has been executed successfully." ~/cdond-c3-projectstarter/backend/migrations_dump.txt
+            if grep -q "has been executed successfully." ~/project/backend/migrations_dump.txt
             then
               curl https://kvdb.io/${KVDB_BUCKET}/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
             else
