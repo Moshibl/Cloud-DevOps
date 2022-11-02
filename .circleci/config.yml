@@ -433,7 +433,6 @@ jobs:
               aws cloudformation delete-stack --stack-name "udapeople-frontend-${OldWorkflowID}"
             fi
 
-
   # notify_on_success:
   #   docker:
   #     - image: cimg/base:stable
