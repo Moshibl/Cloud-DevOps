@@ -173,7 +173,7 @@ jobs:
           name: Back-end Scan
           command: |
             cd backend
-            sudo npm install npm@latest -g
+            npm install
             npm audit fix --force --audit-level=critical
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
